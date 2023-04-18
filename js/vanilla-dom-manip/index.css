@@ -1,0 +1,24 @@
+html, body {
+  margin: 0;
+}
+body {
+  font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  font-size: 3rem;
+}
+p {
+  font-size: 1.5rem;
+}
+section {
+  padding: 8rem 4rem;
+}
+section:nth-child(2n) {
+  background-color: #cacaca;
+}
+section:nth-child(2n+1) {
+  background-color: #acacac;
+}
