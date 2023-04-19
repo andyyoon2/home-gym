@@ -2,7 +2,7 @@ html, body {
   margin: 0;
 }
 body {
-  font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 h1 {
   text-align: center;
@@ -14,11 +14,23 @@ p {
   font-size: 1.5rem;
 }
 section {
+  min-height: 400px;
+}
+section div {
   padding: 8rem 4rem;
 }
-section:nth-child(2n) {
+section:nth-child(2n) div {
   background-color: #cacaca;
 }
-section:nth-child(2n+1) {
+section:nth-child(2n+1) div {
   background-color: #acacac;
+}
+.fade {
+  transition: opacity 0.5s, transform 0.5s;
+  opacity: 0;
+  transform: translateY(50px);
+}
+.fade.in {
+  opacity: 1;
+  transform: translateY(0);
 }
