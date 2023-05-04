@@ -18,3 +18,9 @@ sumOdd (x:xs)
 len :: [a] -> Int
 len [] = 0
 len (x:xs) = 1 + len xs
+
+-- Update list with abs
+-- https://www.hackerrank.com/challenges/fp-update-list/problem
+absList :: [Int] -> [Int]
+absList [] = []
+absList (x:xs) = abs x : absList xs
