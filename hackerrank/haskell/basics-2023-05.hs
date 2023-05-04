@@ -17,10 +17,26 @@ sumOdd (x:xs)
 -- https://www.hackerrank.com/challenges/fp-list-length/problem
 len :: [a] -> Int
 len [] = 0
-len (x:xs) = 1 + len xs
+len (_:xs) = 1 + len xs
 
 -- Update list with abs
 -- https://www.hackerrank.com/challenges/fp-update-list/problem
 absList :: [Int] -> [Int]
 absList [] = []
 absList (x:xs) = abs x : absList xs
+
+-- Calc e^x
+-- https://www.hackerrank.com/challenges/eval-ex/problem
+eToX :: Double -> Double
+eToX x = eExpansion x 10
+
+eExpansion :: Double -> Int -> Double
+eExpansion _ 0 = 1
+eExpansion x i = x^i / fac + eExpansion x (i-1)
+    where fac = fromIntegral (factorial i) :: Double
+
+factorial :: Int -> Int
+factorial neg
+    | neg < 0 = error "Cannot get factorial of negative number"
+factorial 0 = 1
+factorial n = n * factorial (n-1)
