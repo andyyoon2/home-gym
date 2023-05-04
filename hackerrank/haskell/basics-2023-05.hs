@@ -7,11 +7,11 @@ rev (x:xs) = rev xs ++ [x]
 
 -- Sum of odd elements
 -- https://www.hackerrank.com/challenges/fp-sum-of-odd-elements/problem
-f :: [Int] -> Int
-f [] = 0
-f (x:xs)
-    | x `mod` 2 == 1 = x + f xs
-    | otherwise      = f xs
+sumOdd :: [Int] -> Int
+sumOdd [] = 0
+sumOdd (x:xs)
+    | x `mod` 2 == 1 = x + sumOdd xs
+    | otherwise      = sumOdd xs
 
 -- List length
 -- https://www.hackerrank.com/challenges/fp-list-length/problem
