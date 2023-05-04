@@ -12,3 +12,9 @@ f [] = 0
 f (x:xs)
     | x `mod` 2 == 1 = x + f xs
     | otherwise      = f xs
+
+-- List length
+-- https://www.hackerrank.com/challenges/fp-list-length/problem
+len :: [a] -> Int
+len [] = 0
+len (x:xs) = 1 + len xs
