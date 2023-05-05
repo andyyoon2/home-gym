@@ -40,3 +40,6 @@ factorial neg
     | neg < 0 = error "Cannot get factorial of negative number"
 factorial 0 = 1
 factorial n = n * factorial (n-1)
+
+-- https://www.hackerrank.com/challenges/eval-ex/forum/comments/1183250
+eToX x = sum [ x**i / product [1..i] | i <- [0..9] ]
