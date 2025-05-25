@@ -27,7 +27,9 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
   // Recall the ? returns the inner Result to the caller if it's an Err
   let contents = fs::read_to_string(config.file_path)?;
 
-  println!("Text:\n{}", contents);
+  for line in search(&config.query, &contents) {
+    println!("{line}");
+  }
 
   // Idiomatic way to return a Result of nothing from a fn
   Ok(())
